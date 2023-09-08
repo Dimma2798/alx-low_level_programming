@@ -1,16 +1,24 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
- * Description - Code that prints out the letters of the alphabet in lower cases.
- * Return: Eachtime 0 (Successful)
+ *
+ * Description:
+ *     Code that prints out the letters of the alphabet in lower case.
+ *
+ * Return: Always 0 (Successful)
  */
 int main(void)
 {
-int letter;
-for (letter = 'a'; letter <= 'z'; letter++)
-{
-putchar(letter);
+    int letter;
+    
+    for (letter = 'a'; letter <= 'z'; letter++)
+    {
+        putchar(letter);
+    }
+    
+    putchar('\n');
+    
+    return (0);
 }
-putchar('\n');
-return (0);
-}
+
