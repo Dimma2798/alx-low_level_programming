@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-/*
+/**
  * main - printing random numbers and their last digits n 
  *Return - Always (0)
  */
