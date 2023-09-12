@@ -1,23 +1,43 @@
-#include <stdio.h>
-
-
+#include "main.h"
 /**
- * main -To add all multiples of 5 or 3 below 1024
- *       together.
- *
- * Return: 0 if succesful
- */
-int main(void)
+   * print_times_table - Prints the times table of the n,
+    *                     from  0.
+     * @n: The value of the times table to be printed.
+      */
+void print_times_table(int n)
 {
-	int x, total = 0;
+	int num, mult, prod;
 
-	for (x = 0; x <= 1023; x++)
+	if (n >= 0 && n <= 15)
 	{
-		if ((x % 3) == 0 || (x % 5) == 0)
-			total = total + x;
+		for (num = 0; num <= n; num++)
+		{
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
+					_putchar(' ');
+
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
+			}
+			_putchar('\n');
+		}
 	}
-
-	printf("%d\n", total);
-
-	return (0);
 }
