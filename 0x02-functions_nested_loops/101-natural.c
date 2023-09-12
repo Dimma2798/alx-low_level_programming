@@ -1,32 +1,21 @@
 #include <stdio.h>
-
 /**
- * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
- *        separated by a comma followed by a space.
- *        fib's next no. is addition of last two numbers.
- *
- *
- *
- * Return: 0 if succesful
- */
+  * main -To add all multiples of 5 or 3 below 1024
+  *       together.
+  *
+  * Return: 0 if succesful
+  */
 int main(void)
 {
-	int loop;
-	unsigned long f1 = 0, f2 = 1, fib;
+	int n, total = 0;
 
-	for (loop = 0; loop < 50; loop++)
+	for (n = 0; n <= 1023; n++)
 	{
-		fib = f1 + f2;
-		printf("%lu", fib);
-
-		f1 = f2;
-		f2 = fib;
-
-		if (loop == 49)
-			printf("\n");
-		else
-			printf(", ");
+		if ((n % 3) == 0 || (n % 5) == 0)
+			total = total + n;
 	}
+
+	printf("%d\n", total);
 
 	return (0);
 }
